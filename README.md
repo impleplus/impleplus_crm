@@ -1,5 +1,3 @@
-<h2>impleplus crm</h2>
-
 <h2>impleplus Customer Relationship management (CRM)</h2>
 
 <img src="https://impleplus.com/static/builder/crm.png">
