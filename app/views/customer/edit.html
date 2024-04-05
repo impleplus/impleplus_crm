@@ -1,0 +1,220 @@
+<div class="page-body">
+	<div class="container-xl">
+ 		<div class="col-12">
+ 			<div class="card">
+ 				<div class="card-body">
+ 					<ul class="nav nav-tabs" data-bs-toggle="tabs">
+ 						<li class="nav-item">
+ 							<a href="#tabs-oXYDJs" class="nav-link active" data-bs-toggle="tab">Information</a>
+ 						</li>
+ 						<%if(param.id){%>
+ 							<li class="nav-item">
+ 								<a href="#tabs-ACKOAI" class="nav-link " data-bs-toggle="tab">Activities</a>
+ 							</li>
+ 						<%}%>
+ 
+ 					</ul>
+ 					<div class="card-body">
+ 						<div class="tab-content">
+ 							<div class="tab-pane active show" id="tabs-oXYDJs">
+ 								<form action="/customer/save" class="needs-validation" id="frm-oXYDJs" method="post">
+ 									<div class="row " >
+										<div class="col-6 dz undefined" data-dz="wLaIRj" id="wLaIRj" >
+ 							<div class="form-group mb-3 col-md-12">
+ 								<label class="form-label">Customer type</label>
+ 								<div>
+ 									<select name="customer_type" id="select_Gfrbpm" class="form-select" >
+ 										<option value="0" <%if(customerRecord.customer_type==0){%>selected<%}%> >Contact</option>
+										<option value="1" <%if(customerRecord.customer_type==1){%>selected<%}%> >Account</option>
+
+ 									</select>
+ 								</div>
+ 							</div>
+ 									<div class="form-group mb-3 col-md-12">
+ 										<label class="form-label">Gender</label>
+ 										<div>
+ 											<input type="text" name="gender" id="input_DqDdfO" maxlength="100" value="<%=customerRecord.gender%>" class="form-control " autocomplete="off" >
+ 										</div>
+ 									</div>
+ 									<div class="form-group mb-3 col-md-12">
+ 										<label class="form-label">First name / Company name</label>
+ 										<div>
+ 											<input type="text" name="firstname" id="input_HWtInC" maxlength="100" value="<%=customerRecord.firstname%>" required class="form-control " autocomplete="off" >
+ 										</div>
+ 									</div>
+ 									<div class="form-group mb-3 col-md-12">
+ 										<label class="form-label">Last name</label>
+ 										<div>
+ 											<input type="text" name="lastname" id="input_gbCsJP" maxlength="100" value="<%=customerRecord.lastname%>" class="form-control " autocomplete="off" >
+ 										</div>
+ 									</div>
+ 
+ 									<div class="form-group mb-3 col-md-12">
+ 										<label class="form-label">Date of birth</label>
+ 										<div class="input-icon mb-2">
+ 											<input class="form-control datepicker " data-format="DD/MM/YYYY" name="dateofbirth" id="datepicker_rPpoOF" value="<%=moment(customerRecord.dateofbirth).format('DD/MM/YYYY')%>" />
+ 											<span class="input-icon-addon">
+ 												<svg class="icon" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><rect x="4" y="5" width="16" height="16" rx="2" /><line x1="16" y1="3" x2="16" y2="7" /><line x1="8" y1="3" x2="8" y2="7" /><line x1="4" y1="11" x2="20" y2="11" /><line x1="11" y1="15" x2="12" y2="15" /><line x1="12" y1="15" x2="12" y2="18" /></svg>
+ 											</span>
+ 										</div>
+ 									</div>
+ 									<div class="form-group mb-3 col-md-12">
+ 										<label class="form-label">Address</label>
+ 										<div>
+ 											<input type="text" name="address" id="input_gnXXcR" maxlength="100" value="<%=customerRecord.address%>" class="form-control " autocomplete="off" >
+ 										</div>
+ 									</div>
+ 									<div class="form-group mb-3 col-md-12">
+ 										<label class="form-label">Province</label>
+ 										<div>
+ 											<input type="text" name="province" id="input_jafeKs" maxlength="100" value="<%=customerRecord.province%>" class="form-control " autocomplete="off" >
+ 										</div>
+ 									</div>
+ 									<div class="form-group mb-3 col-md-12">
+ 										<label class="form-label">Zipcode</label>
+ 										<div>
+ 											<input type="text" name="zipcode" id="input_SoNIcK" maxlength="100" value="<%=customerRecord.zipcode%>" class="form-control " autocomplete="off" >
+ 										</div>
+ 									</div>
+ 									<div class="form-group mb-3 col-md-12">
+ 										<label class="form-label">Country</label>
+ 										<div>
+ 											<input type="text" name="country" id="input_OzIUHR" maxlength="100" value="<%=customerRecord.country%>" class="form-control " autocomplete="off" >
+ 										</div>
+ 									</div>
+ 
+ 										</div>
+										<div class="col-6 dz undefined" data-dz="DVdHJn" id="DVdHJn" >
+ 									<div class="form-group mb-3 col-md-12">
+ 										<label class="form-label">Contact</label>
+ 										<div>
+ 											<input type="text" name="contact" id="input_pGuwNq" maxlength="100" value="<%=customerRecord.contact%>" class="form-control " autocomplete="off" >
+ 										</div>
+ 									</div>
+ 									<div class="form-group mb-3 col-md-12">
+ 										<label class="form-label">Phone</label>
+ 										<div>
+ 											<input type="text" name="phone" id="input_NXZTdJ" maxlength="100" value="<%=customerRecord.phone%>" class="form-control " autocomplete="off" >
+ 										</div>
+ 									</div>
+ 									<div class="form-group mb-3 col-md-12">
+ 										<label class="form-label">Email</label>
+ 										<div>
+ 											<input type="text" name="email" id="input_JSjscb" maxlength="100" value="<%=customerRecord.email%>" class="form-control " autocomplete="off" >
+ 										</div>
+ 									</div>
+ 									<div class="form-group mb-3 col-md-12">
+ 										<label class="form-label">Tax id</label>
+ 										<div>
+ 											<input type="text" name="taxid" id="input_DoEYVk" maxlength="100" value="<%=customerRecord.taxid%>" class="form-control " autocomplete="off" >
+ 										</div>
+ 									</div>
+ 									<div class="form-group mb-3 col-md-12">
+ 										<label class="form-label">Bank account</label>
+ 										<div>
+ 											<input type="text" name="bankaccount" id="input_SSBKjM" maxlength="100" value="<%=customerRecord.bankaccount%>" class="form-control " autocomplete="off" >
+ 										</div>
+ 									</div>
+ 
+ 							<div class="form-group mb-3 col-md-12">
+ 								<label class="form-label">Note</label>
+ 								<div>
+ 									<textarea name="note" id="textarea_MeCAqm" maxlength="100" class="form-control " ><%=customerRecord.note%></textarea>
+ 								</div>
+ 							</div>
+ 
+ 							<div class="form-group mb-3 col-md-12">
+ 								<label class="form-label">Interest</label>
+ 								<div>
+ 									<textarea name="interest" id="textarea_GqhoAn" maxlength="100" class="form-control " ><%=customerRecord.interest%></textarea>
+ 								</div>
+ 							</div>
+ 
+ 										</div>
+									</div>
+ 									<div class="row " >
+										<div class="col-10 dz " data-dz="xRtvXX" id="xRtvXX" >
+ 
+ 										</div>
+										<div class="col-2 dz text-right" data-dz="LnVWas" id="LnVWas" >
+ 											<%if(accessAction.edit){%> 
+ 												<div class="spinner-border" id="button_coAMEA_loading" role="status" style="display: none;"><span class="visually-hidden">Loading...</span></div> 
+ 												<button type="submit" id="button_coAMEA" class="btn btn-fw btn-primary btn-save" data-form="frm-oXYDJs" method-callback="" method-before="" >Save</button> 
+ 											<%}%>
+ 
+ 										</div>
+									</div>
+ 
+ 
+ 								</form>
+ 							</div>							<%if(param.id){%>
+ 							<div class="tab-pane " id="tabs-ACKOAI">
+ 								
+ 							<h3>Activities</h3><hr class="header-text"/>
+ 								<div class="row pb-1">
+ 
+ 									<div class="col-auto ms-auto d-print-none">
+ 										<div class="btn-list">
+ 											<%if(accessAction.export){%><a href="#" onclick="table_KkpGLO.export()" class="btn btn-outline-secondary d-none d-sm-inline">Export</a><%}%>
+ 											<%if(accessAction.create){%><a href="/activity/edit?object=customer&objectid=<%=param.id%>" class="btn btn-outline-success d-none d-sm-inline" target="_blank">New Data</a><%}%>
+ 										</div>
+ 									</div>
+ 								</div>
+ 								<div class="table-responsive">
+ 									<table class="table card-table table-vcenter text-nowrap datatable table-striped" id="tbl-table_KkpGLO">
+ 										<thead>
+ 											<tr>
+ 												<th>Activity status</th>
+												<th>Due date</th>
+												<th>Detail</th>
+												<th></th>
+												<th></th>
+ 											</tr>
+ 										</thead>
+ 										<tbody>
+ 										</tbody>
+ 										<tfoot></tfoot> 
+ 									</table>
+ 								
+
+ 								<div id="tbl-table_KkpGLO-pagination" class="imple-pagination"></div>
+ 							</div>
+ 
+ 							</div>
+ <%}%>
+ 
+ 						</div>
+ 					</div>
+ 				</div>
+ 			</div>
+ 		</div>
+ 	</div>
+</div>
+
+<%- contentFor('scripts') %>
+<script type="text/javascript">
+    var accessAction = [];
+    var accessActionData = "<%-accessAction%>";
+    var dataParam = '<%-JSON.stringify(param)%>';
+    var param = {};
+    if(dataParam != ""){
+      param = JSON.parse('<%-JSON.stringify(param)%>');
+    }    
+    if(accessActionData != "" && accessActionData != undefined) {
+        accessAction = JSON.parse(String.raw `<%-JSON.stringify(accessAction)%>`);
+    }
+    
+    var activityRecords = JSON.parse(String.raw `<%-JSON.stringify(activityRecords)%>`);
+    
+    
+    var table_KkpGLO = new Table_KkpGLO("table_KkpGLO",accessAction);
+0
+
+onload = () => {
+        table_KkpGLO.render(activityRecords,"");
+        
+}
+    
+    
+
+</script>

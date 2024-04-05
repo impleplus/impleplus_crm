@@ -1,0 +1,113 @@
+<div class="page-body">
+	<div class="container-xl">
+ 		<div class="col-12">
+ 			<div class="card">
+ 				<div class="card-body">
+ 					<ul class="nav nav-tabs" data-bs-toggle="tabs">
+ 						<li class="nav-item">
+ 							<a href="#tabs-EpuFgw" class="nav-link active" data-bs-toggle="tab">Information</a>
+ 						</li>
+ 
+ 					</ul>
+ 					<div class="card-body">
+ 						<div class="tab-content">
+ 							<div class="tab-pane active show" id="tabs-EpuFgw">
+ 								<form action="/product/save" class="needs-validation" id="frm-EpuFgw" method="post">
+ 
+ 									<div class="form-group mb-3 col-md-12">
+ 										<label class="form-label">Product Group</label>
+ 											<div class="row g-2">
+ 											<div class="col">
+ 												<input type="hidden" name="productgroup_id" id="lookup_duOeeg" value="<%=productRecord.productgroup_id%>">
+ 												<input type="text" name="productgroup_id_text" id="lookup_duOeeg_text" value="<%=productRecord.productgroup_text%>" class="form-control " >
+ 											</div>
+ 											<div class="col-auto">
+ 												<button type="button" href="#" class="btn btn-white btn-icon" aria-label="Button" data-title="Product Group" data-varibale="productgroupRecords" data-url="/productgroup" data-headers="Name" data-fields="name" data-select="id,name" data-target="lookup_duOeeg,lookup_duOeeg_text" onclick="lookup.open(this)">
+ 													<svg class="icon" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><circle cx="10" cy="10" r="7" /><line x1="21" y1="21" x2="15" y2="15" /></svg>
+ 												</button>
+ 											</div>
+ 										</div>
+ 									</div>
+ 									<div class="form-group mb-3 col-md-12">
+ 										<label class="form-label">Code</label>
+ 										<div>
+ 											<input type="text" name="code" id="input_uMjGFc" maxlength="100" value="<%=productRecord.code%>" class="form-control " autocomplete="off" >
+ 										</div>
+ 									</div>
+ 									<div class="form-group mb-3 col-md-12">
+ 										<label class="form-label">Name</label>
+ 										<div>
+ 											<input type="text" name="name" id="input_UdXiPx" maxlength="100" value="<%=productRecord.name%>" class="form-control " autocomplete="off" >
+ 										</div>
+ 									</div>
+ 									<div class="form-group mb-3 col-md-12">
+ 										<label class="form-label">Vendor</label>
+ 										<div>
+ 											<input type="text" name="vendor" id="input_qeVfKK" maxlength="100" value="<%=productRecord.vendor%>" class="form-control " autocomplete="off" >
+ 										</div>
+ 									</div>
+ 									<div class="form-group mb-3 col-md-12">
+ 										<label class="form-label">Price manufactory</label>
+ 										<div>
+ 											<input type="number" name="price_manufactory" id="input_hGNyiT" maxlength="100" value="<%=productRecord.price_manufactory%>" required class="form-control " autocomplete="off" >
+ 										</div>
+ 									</div>
+ 									<div class="form-group mb-3 col-md-12">
+ 										<label class="form-label">Price sale</label>
+ 										<div>
+ 											<input type="number" name="price_sale" id="input_yqRoyN" maxlength="100" value="<%=productRecord.price_sale%>" required class="form-control " autocomplete="off" >
+ 										</div>
+ 									</div>
+ 
+ 							<div class="form-group mb-3 col-md-12">
+ 								<label class="form-label">Note</label>
+ 								<div>
+ 									<textarea name="note" id="textarea_DTNmaQ" maxlength="100" class="form-control " ><%=productRecord.note%></textarea>
+ 								</div>
+ 							</div>
+ 									<div class="row " >
+										<div class="col-10 dz " data-dz="VmldGe" id="VmldGe" >
+ 
+ 										</div>
+										<div class="col-2 dz text-right" data-dz="zPigDC" id="zPigDC" >
+ 											<%if(accessAction.edit){%> 
+ 												<div class="spinner-border" id="button_OutjJh_loading" role="status" style="display: none;"><span class="visually-hidden">Loading...</span></div> 
+ 												<button type="submit" id="button_OutjJh" class="btn btn-fw btn-primary btn-save" data-form="frm-EpuFgw" method-callback="" method-before="" >Save</button> 
+ 											<%}%>
+ 
+ 										</div>
+									</div>
+ 
+ 
+ 								</form>
+ 							</div>
+ 
+ 						</div>
+ 					</div>
+ 				</div>
+ 			</div>
+ 		</div>
+ 	</div>
+</div>
+
+<%- contentFor('scripts') %>
+<script type="text/javascript">
+    var accessAction = [];
+    var accessActionData = "<%-accessAction%>";
+    var dataParam = '<%-JSON.stringify(param)%>';
+    var param = {};
+    if(dataParam != ""){
+      param = JSON.parse('<%-JSON.stringify(param)%>');
+    }    
+    if(accessActionData != "" && accessActionData != undefined) {
+        accessAction = JSON.parse(String.raw `<%-JSON.stringify(accessAction)%>`);
+    }
+    0
+
+onload = () => {
+        
+}
+    
+    
+
+</script>

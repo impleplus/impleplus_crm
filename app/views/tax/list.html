@@ -1,0 +1,76 @@
+<div class="page-body">
+	<div class="container-xl">
+ 		<div class="col-12">
+ 			<div class="card">
+ 				<div class="card-body">
+ 							<h3>Tax</h3><hr class="header-text"/>
+ 								<div class="row pb-1">
+ 									<div class="col col-3">
+ 										<div class="input-icon">
+ 											<span class="input-icon-addon">
+ 												<svg class="icon" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><circle cx="10" cy="10" r="7" /><line x1="21" y1="21" x2="15" y2="15" /></svg>
+ 											</span>
+ 											<input type="text" name="qtaxRecords" id="qtaxRecords" value="<%=param.qtaxRecords%>" onkeyup="table_BwOyPE.search(event)" data-type="text" data-field='billto,shipto,doc_no' data-operator="like" class="form-control table_BwOyPE-searchFilter" placeholder="Search…" autocomplete="off">
+ 										</div>
+ 									</div>
+ 									<div class="col-auto ms-auto d-print-none">
+ 										<div class="btn-list">
+ 											<%if(accessAction.export){%><a href="#" onclick="table_BwOyPE.export()" class="btn btn-outline-secondary d-none d-sm-inline">Export</a><%}%>
+ 											<%if(accessAction.create){%><a href="/tax/edit" class="btn btn-outline-success d-none d-sm-inline" target="">New Data</a><%}%>
+ 										</div>
+ 									</div>
+ 								</div>
+ 								<div class="table-responsive">
+ 									<table class="table card-table table-vcenter text-nowrap datatable table-striped" id="tbl-table_BwOyPE">
+ 										<thead>
+ 											<tr>
+ 												<th>Billto</th>
+												<th>Shipto</th>
+												<th>Doc no</th>
+												<th>Doc date</th>
+												<th>Invoice id</th>
+												<th></th>
+												<th></th>
+ 											</tr>
+ 										</thead>
+ 										<tbody>
+ 										</tbody>
+ 										<tfoot></tfoot> 
+ 									</table>
+ 								
+
+ 								<div id="tbl-table_BwOyPE-pagination" class="imple-pagination"></div>
+ 							</div>
+ 				</div>
+ 			</div>
+ 		</div>
+ 	</div>
+</div>
+
+<%- contentFor('scripts') %>
+<script type="text/javascript">
+    var accessAction = [];
+    var accessActionData = "<%-accessAction%>";
+    var dataParam = '<%-JSON.stringify(param)%>';
+    var param = {};
+    if(dataParam != ""){
+      param = JSON.parse('<%-JSON.stringify(param)%>');
+    }    
+    if(accessActionData != "" && accessActionData != undefined) {
+        accessAction = JSON.parse(String.raw `<%-JSON.stringify(accessAction)%>`);
+    }
+    
+    var taxRecords = JSON.parse(String.raw `<%-JSON.stringify(taxRecords)%>`);
+    
+    var taxRecordsPagination = JSON.parse(String.raw `<%-JSON.stringify(taxRecordsPagination)%>`);
+    var table_BwOyPE = new Table_BwOyPE("table_BwOyPE",accessAction);
+0
+
+onload = () => {
+        table_BwOyPE.render(taxRecords,"");
+        table_BwOyPE.pagination(taxRecordsPagination);
+}
+    
+    
+
+</script>

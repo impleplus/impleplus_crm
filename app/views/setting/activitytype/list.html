@@ -1,0 +1,73 @@
+<div class="page-body">
+	<div class="container-xl">
+ 		<div class="col-12">
+ 			<div class="card">
+ 				<div class="card-body">
+ 							<h3>Activity type</h3><hr class="header-text"/>
+ 								<div class="row pb-1">
+ 									<div class="col col-3">
+ 										<div class="input-icon">
+ 											<span class="input-icon-addon">
+ 												<svg class="icon" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><circle cx="10" cy="10" r="7" /><line x1="21" y1="21" x2="15" y2="15" /></svg>
+ 											</span>
+ 											<input type="text" name="qactivitytypeRecords" id="qactivitytypeRecords" value="<%=param.qactivitytypeRecords%>" onkeyup="table_QAzKwU.search(event)" data-type="text" data-field='name' data-operator="like" class="form-control table_QAzKwU-searchFilter" placeholder="Search…" autocomplete="off">
+ 										</div>
+ 									</div>
+ 									<div class="col-auto ms-auto d-print-none">
+ 										<div class="btn-list">
+ 											<%if(accessAction.export){%><a href="#" onclick="table_QAzKwU.export()" class="btn btn-outline-secondary d-none d-sm-inline">Export</a><%}%>
+ 											<%if(accessAction.create){%><a href="/setting/activitytype/edit" class="btn btn-outline-success d-none d-sm-inline" target="">New Data</a><%}%>
+ 										</div>
+ 									</div>
+ 								</div>
+ 								<div class="table-responsive">
+ 									<table class="table card-table table-vcenter text-nowrap datatable table-striped" id="tbl-table_QAzKwU">
+ 										<thead>
+ 											<tr>
+ 												<th>Name</th>
+												<th>Note</th>
+												<th></th>
+												<th></th>
+ 											</tr>
+ 										</thead>
+ 										<tbody>
+ 										</tbody>
+ 										<tfoot></tfoot> 
+ 									</table>
+ 								
+
+ 								<div id="tbl-table_QAzKwU-pagination" class="imple-pagination"></div>
+ 							</div>
+ 				</div>
+ 			</div>
+ 		</div>
+ 	</div>
+</div>
+
+<%- contentFor('scripts') %>
+<script type="text/javascript">
+    var accessAction = [];
+    var accessActionData = "<%-accessAction%>";
+    var dataParam = '<%-JSON.stringify(param)%>';
+    var param = {};
+    if(dataParam != ""){
+      param = JSON.parse('<%-JSON.stringify(param)%>');
+    }    
+    if(accessActionData != "" && accessActionData != undefined) {
+        accessAction = JSON.parse(String.raw `<%-JSON.stringify(accessAction)%>`);
+    }
+    
+    var activitytypeRecords = JSON.parse(String.raw `<%-JSON.stringify(activitytypeRecords)%>`);
+    
+    var activitytypeRecordsPagination = JSON.parse(String.raw `<%-JSON.stringify(activitytypeRecordsPagination)%>`);
+    var table_QAzKwU = new Table_QAzKwU("table_QAzKwU",accessAction);
+0
+
+onload = () => {
+        table_QAzKwU.render(activitytypeRecords,"");
+        table_QAzKwU.pagination(activitytypeRecordsPagination);
+}
+    
+    
+
+</script>

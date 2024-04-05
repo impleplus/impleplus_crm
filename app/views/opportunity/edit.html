@@ -1,0 +1,205 @@
+<div class="page-body">
+	<div class="container-xl">
+ 		<div class="col-12">
+ 			<div class="card">
+ 				<div class="card-body">
+ 					<ul class="nav nav-tabs" data-bs-toggle="tabs">
+ 						<li class="nav-item">
+ 							<a href="#tabs-fXLOOH" class="nav-link active" data-bs-toggle="tab">Information</a>
+ 						</li>
+ 						<%if(param.id){%>
+ 							<li class="nav-item">
+ 								<a href="#tabs-yMOprl" class="nav-link " data-bs-toggle="tab">Activities</a>
+ 							</li>
+ 						<%}%>
+ 
+ 					</ul>
+ 					<div class="card-body">
+ 						<div class="tab-content">
+ 							<div class="tab-pane active show" id="tabs-fXLOOH">
+ 								<form action="/opportunity/save" class="needs-validation" id="frm-fXLOOH" method="post">
+ 									<div class="row " >
+										<div class="col-6 dz undefined" data-dz="sspDyY" id="sspDyY" >
+ 									<div class="form-group mb-3 col-md-12">
+ 										<label class="form-label">Gender</label>
+ 										<div>
+ 											<input type="text" name="gender" id="input_XWJgEB" maxlength="100" value="<%=opportunityRecord.gender%>" class="form-control " autocomplete="off" >
+ 										</div>
+ 									</div>
+ 									<div class="form-group mb-3 col-md-12">
+ 										<label class="form-label">Firstname</label>
+ 										<div>
+ 											<input type="text" name="firstname" id="input_FTAuFN" maxlength="100" value="<%=opportunityRecord.firstname%>" class="form-control " autocomplete="off" >
+ 										</div>
+ 									</div>
+ 									<div class="form-group mb-3 col-md-12">
+ 										<label class="form-label">Lastname</label>
+ 										<div>
+ 											<input type="text" name="lastname" id="input_NDjZOr" maxlength="100" value="<%=opportunityRecord.lastname%>" class="form-control " autocomplete="off" >
+ 										</div>
+ 									</div>
+ 									<div class="form-group mb-3 col-md-12">
+ 										<label class="form-label">Address</label>
+ 										<div>
+ 											<input type="text" name="address" id="input_DGsYCn" maxlength="100" value="<%=opportunityRecord.address%>" class="form-control " autocomplete="off" >
+ 										</div>
+ 									</div>
+ 									<div class="form-group mb-3 col-md-12">
+ 										<label class="form-label">Province</label>
+ 										<div>
+ 											<input type="text" name="province" id="input_cIfuYT" maxlength="100" value="<%=opportunityRecord.province%>" class="form-control " autocomplete="off" >
+ 										</div>
+ 									</div>
+ 									<div class="form-group mb-3 col-md-12">
+ 										<label class="form-label">Country</label>
+ 										<div>
+ 											<input type="text" name="country" id="input_qWjCnV" maxlength="100" value="<%=opportunityRecord.country%>" class="form-control " autocomplete="off" >
+ 										</div>
+ 									</div>
+ 									<div class="form-group mb-3 col-md-12">
+ 										<label class="form-label">Zipcode</label>
+ 										<div>
+ 											<input type="text" name="zipcode" id="input_xMYIUp" maxlength="100" value="<%=opportunityRecord.zipcode%>" class="form-control " autocomplete="off" >
+ 										</div>
+ 									</div>
+ 
+ 										</div>
+										<div class="col-6 dz undefined" data-dz="sfxaqM" id="sfxaqM" >
+ 									<div class="form-group mb-3 col-md-12">
+ 										<label class="form-label">Contact</label>
+ 										<div>
+ 											<input type="text" name="contact" id="input_yGuszN" maxlength="100" value="<%=opportunityRecord.contact%>" class="form-control " autocomplete="off" >
+ 										</div>
+ 									</div>
+ 									<div class="form-group mb-3 col-md-12">
+ 										<label class="form-label">Phone</label>
+ 										<div>
+ 											<input type="text" name="phone" id="input_TwOUPb" maxlength="100" value="<%=opportunityRecord.phone%>" class="form-control " autocomplete="off" >
+ 										</div>
+ 									</div>
+ 									<div class="form-group mb-3 col-md-12">
+ 										<label class="form-label">Email</label>
+ 										<div>
+ 											<input type="text" name="email" id="input_fbCCBw" maxlength="100" value="<%=opportunityRecord.email%>" class="form-control " autocomplete="off" >
+ 										</div>
+ 									</div>
+ 
+ 									<div class="form-group mb-3 col-md-12">
+ 										<label class="form-label">Lead</label>
+ 											<div class="row g-2">
+ 											<div class="col">
+ 												<input type="hidden" name="lead_id" id="lookup_mnXGMs" value="<%=opportunityRecord.lead_id%>">
+ 												<input type="text" name="lead_id_text" id="lookup_mnXGMs_text" value="<%=opportunityRecord.lead_text%>" class="form-control " >
+ 											</div>
+ 											<div class="col-auto">
+ 												<button type="button" href="#" class="btn btn-white btn-icon" aria-label="Button" data-title="Lead" data-varibale="leadsRecords" data-url="/leads" data-headers="Firstname,Lastname" data-fields="firstname,lastname" data-select="id,firstname" data-target="lookup_mnXGMs,lookup_mnXGMs_text" onclick="lookup.open(this)">
+ 													<svg class="icon" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><circle cx="10" cy="10" r="7" /><line x1="21" y1="21" x2="15" y2="15" /></svg>
+ 												</button>
+ 											</div>
+ 										</div>
+ 									</div>
+ 
+ 									<div class="form-group mb-3 col-md-12">
+ 										<label class="form-label">Dateofbirth</label>
+ 										<div class="input-icon mb-2">
+ 											<input class="form-control datepicker " data-format="DD/MM/YYYY" name="dateofbirth" id="datepicker_XFSIgP" value="<%=moment(opportunityRecord.dateofbirth).format('DD/MM/YYYY')%>" />
+ 											<span class="input-icon-addon">
+ 												<svg class="icon" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><rect x="4" y="5" width="16" height="16" rx="2" /><line x1="16" y1="3" x2="16" y2="7" /><line x1="8" y1="3" x2="8" y2="7" /><line x1="4" y1="11" x2="20" y2="11" /><line x1="11" y1="15" x2="12" y2="15" /><line x1="12" y1="15" x2="12" y2="18" /></svg>
+ 											</span>
+ 										</div>
+ 									</div>
+ 
+ 							<div class="form-group mb-3 col-md-12">
+ 								<label class="form-label">Interest</label>
+ 								<div>
+ 									<textarea name="interest" id="textarea_NQwzei" maxlength="100" class="form-control " ><%=opportunityRecord.interest%></textarea>
+ 								</div>
+ 							</div>
+ 
+ 							<div class="form-group mb-3 col-md-12">
+ 								<label class="form-label">Note</label>
+ 								<div>
+ 									<textarea name="note" id="textarea_vqUReN" maxlength="100" class="form-control " ><%=opportunityRecord.note%></textarea>
+ 								</div>
+ 							</div>
+ 
+ 										</div>
+									</div>
+ 											<%if(accessAction.edit){%> 
+ 												<div class="spinner-border" id="button_JwDAkS_loading" role="status" style="display: none;"><span class="visually-hidden">Loading...</span></div> 
+ 												<button type="submit" id="button_JwDAkS" class="btn btn-fw btn-primary btn-save" data-form="frm-fXLOOH" method-callback="" method-before="" >Save</button> 
+ 											<%}%>
+ 
+ 
+ 								</form>
+ 							</div>							<%if(param.id){%>
+ 							<div class="tab-pane " id="tabs-yMOprl">
+ 								
+ 							<h3>Activities</h3><hr class="header-text"/>
+ 								<div class="row pb-1">
+ 
+ 									<div class="col-auto ms-auto d-print-none">
+ 										<div class="btn-list">
+ 											<%if(accessAction.export){%><a href="#" onclick="table_dSbZhs.export()" class="btn btn-outline-secondary d-none d-sm-inline">Export</a><%}%>
+ 											<%if(accessAction.create){%><a href="/activity/edit?object=opportunity&objectid=<%=param.id%>" class="btn btn-outline-success d-none d-sm-inline" target="_blank">New Data</a><%}%>
+ 										</div>
+ 									</div>
+ 								</div>
+ 								<div class="table-responsive">
+ 									<table class="table card-table table-vcenter text-nowrap datatable table-striped" id="tbl-table_dSbZhs">
+ 										<thead>
+ 											<tr>
+ 												<th>Activity status</th>
+												<th>Due date</th>
+												<th>Detail</th>
+												<th></th>
+												<th></th>
+ 											</tr>
+ 										</thead>
+ 										<tbody>
+ 										</tbody>
+ 										<tfoot></tfoot> 
+ 									</table>
+ 								
+
+ 								<div id="tbl-table_dSbZhs-pagination" class="imple-pagination"></div>
+ 							</div>
+ 
+ 							</div>
+ <%}%>
+ 
+ 						</div>
+ 					</div>
+ 				</div>
+ 			</div>
+ 		</div>
+ 	</div>
+</div>
+
+<%- contentFor('scripts') %>
+<script type="text/javascript">
+    var accessAction = [];
+    var accessActionData = "<%-accessAction%>";
+    var dataParam = '<%-JSON.stringify(param)%>';
+    var param = {};
+    if(dataParam != ""){
+      param = JSON.parse('<%-JSON.stringify(param)%>');
+    }    
+    if(accessActionData != "" && accessActionData != undefined) {
+        accessAction = JSON.parse(String.raw `<%-JSON.stringify(accessAction)%>`);
+    }
+    
+    var activityRecords = JSON.parse(String.raw `<%-JSON.stringify(activityRecords)%>`);
+    
+    
+    var table_dSbZhs = new Table_dSbZhs("table_dSbZhs",accessAction);
+0
+
+onload = () => {
+        table_dSbZhs.render(activityRecords,"");
+        
+}
+    
+    
+
+</script>

@@ -1,0 +1,121 @@
+<div class="page-body">
+	<div class="container-xl">
+ 		<div class="col-12">
+ 			<div class="card">
+ 				<div class="card-body">
+ 					<ul class="nav nav-tabs" data-bs-toggle="tabs">
+ 						<li class="nav-item">
+ 							<a href="#tabs-VinvdH" class="nav-link active" data-bs-toggle="tab">Information</a>
+ 						</li>
+ 
+ 					</ul>
+ 					<div class="card-body">
+ 						<div class="tab-content">
+ 							<div class="tab-pane active show" id="tabs-VinvdH">
+ 								<form action="/activity/save" class="needs-validation" id="frm-VinvdH" method="post">
+ 									<div class="form-group mb-3 col-md-12">
+ 										<label class="form-label">Object</label>
+ 										<div>
+ 											<input type="text" name="object_name" id="input_kOtUef" maxlength="100" value="<%=objectRecord.object_name%>" readonly class="form-control " autocomplete="off" >
+ 										</div>
+ 									</div>
+ 
+ 									<div class="form-group mb-3 col-md-12">
+ 										<label class="form-label">Activity type</label>
+ 											<div class="row g-2">
+ 											<div class="col">
+ 												<input type="hidden" name="activitytype_id" id="lookup_sJRZcJ" value="<%=activityRecord.activitytype_id%>">
+ 												<input type="text" name="activitytype_id_text" id="lookup_sJRZcJ_text" value="<%=activityRecord.activitytype_text%>" class="form-control " >
+ 											</div>
+ 											<div class="col-auto">
+ 												<button type="button" href="#" class="btn btn-white btn-icon" aria-label="Button" data-title="Activity type" data-varibale="activitytypeRecords" data-url="/setting/activitytype" data-headers="Name" data-fields="name" data-select="id,name" data-target="lookup_sJRZcJ,lookup_sJRZcJ_text" onclick="lookup.open(this)">
+ 													<svg class="icon" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><circle cx="10" cy="10" r="7" /><line x1="21" y1="21" x2="15" y2="15" /></svg>
+ 												</button>
+ 											</div>
+ 										</div>
+ 									</div>
+ 
+ 									<div class="form-group mb-3 col-md-12">
+ 										<label class="form-label">Duedate</label>
+ 										<div class="input-icon mb-2">
+ 											<input class="form-control datepicker " data-format="DD/MM/YYYY" name="duedate" id="datepicker_awXGXN" value="<%=moment(activityRecord.duedate).format('DD/MM/YYYY')%>" />
+ 											<span class="input-icon-addon">
+ 												<svg class="icon" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><rect x="4" y="5" width="16" height="16" rx="2" /><line x1="16" y1="3" x2="16" y2="7" /><line x1="8" y1="3" x2="8" y2="7" /><line x1="4" y1="11" x2="20" y2="11" /><line x1="11" y1="15" x2="12" y2="15" /><line x1="12" y1="15" x2="12" y2="18" /></svg>
+ 											</span>
+ 										</div>
+ 									</div>
+ 
+ 									<div class="form-group mb-3 col-md-12">
+ 										<label class="form-label">Activity status</label>
+ 											<div class="row g-2">
+ 											<div class="col">
+ 												<input type="hidden" name="activitystatus_id" id="lookup_iwmcSA" value="<%=activityRecord.activitystatus_id%>">
+ 												<input type="text" name="activitystatus_id_text" id="lookup_iwmcSA_text" value="<%=activityRecord.activitystatus_text%>" class="form-control " >
+ 											</div>
+ 											<div class="col-auto">
+ 												<button type="button" href="#" class="btn btn-white btn-icon" aria-label="Button" data-title="Activity status" data-varibale="activitystatusRecords" data-url="/setting/activitystatus" data-headers="Name" data-fields="name" data-select="id,name" data-target="lookup_iwmcSA,lookup_iwmcSA_text" onclick="lookup.open(this)">
+ 													<svg class="icon" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><circle cx="10" cy="10" r="7" /><line x1="21" y1="21" x2="15" y2="15" /></svg>
+ 												</button>
+ 											</div>
+ 										</div>
+ 									</div>
+ 
+ 							<div class="form-group mb-3 col-md-12">
+ 								<label class="form-label">Detail</label>
+ 								<div>
+ 									<textarea name="detail" id="textarea_dKOJcw" maxlength="100" class="form-control " ><%=activityRecord.detail%></textarea>
+ 								</div>
+ 							</div>
+ 
+ 							<div class="form-group mb-3 col-md-12">
+ 								<label class="form-label">Note</label>
+ 								<div>
+ 									<textarea name="note" id="textarea_GZMPvj" maxlength="100" class="form-control " ><%=activityRecord.note%></textarea>
+ 								</div>
+ 							</div>
+ 									<div class="row " >
+										<div class="col-10 dz " data-dz="XeBtbg" id="XeBtbg" >
+ 
+ 										</div>
+										<div class="col-2 dz text-right" data-dz="CXNIwO" id="CXNIwO" >
+ 											<%if(accessAction.edit){%> 
+ 												<div class="spinner-border" id="button_vshRIO_loading" role="status" style="display: none;"><span class="visually-hidden">Loading...</span></div> 
+ 												<button type="submit" id="button_vshRIO" class="btn btn-fw btn-primary btn-save" data-form="frm-VinvdH" method-callback="" method-before="" >Save</button> 
+ 											<%}%>
+ 
+ 										</div>
+									</div>
+ 
+ 
+ 								</form>
+ 							</div>
+ 
+ 						</div>
+ 					</div>
+ 				</div>
+ 			</div>
+ 		</div>
+ 	</div>
+</div>
+
+<%- contentFor('scripts') %>
+<script type="text/javascript">
+    var accessAction = [];
+    var accessActionData = "<%-accessAction%>";
+    var dataParam = '<%-JSON.stringify(param)%>';
+    var param = {};
+    if(dataParam != ""){
+      param = JSON.parse('<%-JSON.stringify(param)%>');
+    }    
+    if(accessActionData != "" && accessActionData != undefined) {
+        accessAction = JSON.parse(String.raw `<%-JSON.stringify(accessAction)%>`);
+    }
+    0
+
+onload = () => {
+        document.getElementById("input_kOtUef").parentNode.parentNode.querySelector("label").innerHTML = param.object.toUpperCase();
+}
+    
+    
+
+</script>

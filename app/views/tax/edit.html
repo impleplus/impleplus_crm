@@ -1,0 +1,298 @@
+<div class="page-body">
+	<div class="container-xl">
+ 		<div class="col-12">
+ 			<div class="card">
+ 				<div class="card-body">
+ 					<ul class="nav nav-tabs" data-bs-toggle="tabs">
+ 						<li class="nav-item">
+ 							<a href="#tabs-xGOcrk" class="nav-link active" data-bs-toggle="tab">Information</a>
+ 						</li>
+ 
+ 					</ul>
+ 					<div class="card-body">
+ 						<div class="tab-content">
+ 							<div class="tab-pane active show" id="tabs-xGOcrk">
+ 								<form action="/tax/save" class="needs-validation" id="frm-xGOcrk" method="post">
+ 									<div class="row " >
+										<div class="col-6 dz undefined" data-dz="VfRIBQ" id="VfRIBQ" >
+ 
+ 									<div class="form-group mb-3 col-md-12">
+ 										<label class="form-label">Bill To</label>
+ 											<div class="row g-2">
+ 											<div class="col">
+ 												<input type="hidden" name="customer_id" id="lookup_vFGpke" value="<%=taxRecord.customer_id%>">
+ 												<input type="text" name="customer_id_text" id="lookup_vFGpke_text" value="<%=taxRecord.firstname%>" class="form-control " >
+ 											</div>
+ 											<div class="col-auto">
+ 												<button type="button" href="#" class="btn btn-white btn-icon" aria-label="Button" data-title="Bill To" data-varibale="customerRecords" data-url="/customer" data-headers="Customer" data-fields="firstname,lastname" data-select="id,firstname,firstname,address,province,country,zipcode,phone,email,taxid" data-target="lookup_vFGpke,lookup_vFGpke_text,input_HaOueI,input_dbroDk,input_qCOCWh,input_KvtzpL,input_DeuOdg,input_IlyIbw,input_YPddXO,input_SySLYN" onclick="lookup.open(this)">
+ 													<svg class="icon" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><circle cx="10" cy="10" r="7" /><line x1="21" y1="21" x2="15" y2="15" /></svg>
+ 												</button>
+ 											</div>
+ 										</div>
+ 									</div>
+ 									<div class="form-group mb-3 col-md-12">
+ 										<label class="form-label">Billto</label>
+ 										<div>
+ 											<input type="text" name="billto" id="input_HaOueI" maxlength="100" value="<%=taxRecord.billto%>" class="form-control " autocomplete="off" >
+ 										</div>
+ 									</div>
+ 									<div class="form-group mb-3 col-md-12">
+ 										<label class="form-label">Billto address</label>
+ 										<div>
+ 											<input type="text" name="billto_address" id="input_dbroDk" maxlength="100" value="<%=taxRecord.billto_address%>" class="form-control " autocomplete="off" >
+ 										</div>
+ 									</div>
+ 									<div class="form-group mb-3 col-md-12">
+ 										<label class="form-label">Billto province</label>
+ 										<div>
+ 											<input type="text" name="billto_province" id="input_qCOCWh" maxlength="100" value="<%=taxRecord.billto_province%>" class="form-control " autocomplete="off" >
+ 										</div>
+ 									</div>
+ 									<div class="form-group mb-3 col-md-12">
+ 										<label class="form-label">Billto country</label>
+ 										<div>
+ 											<input type="text" name="billto_country" id="input_KvtzpL" maxlength="100" value="<%=taxRecord.billto_country%>" class="form-control " autocomplete="off" >
+ 										</div>
+ 									</div>
+ 									<div class="form-group mb-3 col-md-12">
+ 										<label class="form-label">Billto zipcode</label>
+ 										<div>
+ 											<input type="text" name="billto_zipcode" id="input_DeuOdg" maxlength="100" value="<%=taxRecord.billto_zipcode%>" class="form-control " autocomplete="off" >
+ 										</div>
+ 									</div>
+ 									<div class="form-group mb-3 col-md-12">
+ 										<label class="form-label">Billto phone</label>
+ 										<div>
+ 											<input type="text" name="billto_phone" id="input_IlyIbw" maxlength="100" value="<%=taxRecord.billto_phone%>" class="form-control " autocomplete="off" >
+ 										</div>
+ 									</div>
+ 									<div class="form-group mb-3 col-md-12">
+ 										<label class="form-label">Billto email</label>
+ 										<div>
+ 											<input type="text" name="billto_email" id="input_YPddXO" maxlength="100" value="<%=taxRecord.billto_email%>" class="form-control " autocomplete="off" >
+ 										</div>
+ 									</div>
+ 									<div class="form-group mb-3 col-md-12">
+ 										<label class="form-label">Billto Tax Id</label>
+ 										<div>
+ 											<input type="text" name="taxid" id="input_SySLYN" maxlength="100" value="<%=taxRecord.taxid%>" class="form-control " autocomplete="off" >
+ 										</div>
+ 									</div>
+ 
+ 										</div>
+										<div class="col-6 dz undefined" data-dz="ekNOHK" id="ekNOHK" >
+ 
+ 									<div class="form-group mb-3 col-md-12">
+ 										<label class="form-label">lookup</label>
+ 											<div class="row g-2">
+ 											<div class="col">
+ 												<input type="hidden" name="customer_id" id="lookup_btBhAY" value="<%=taxRecord.customer_id%>">
+ 												<input type="text" name="customer_id_text" id="lookup_btBhAY_text" value="<%=taxRecord.firstname%>" class="form-control " >
+ 											</div>
+ 											<div class="col-auto">
+ 												<button type="button" href="#" class="btn btn-white btn-icon" aria-label="Button" data-title="lookup" data-varibale="customerRecords" data-url="/customer" data-headers="Ship To" data-fields="firstname,lastname" data-select="id,firstname,firstname,address,province,country,zipcode,phone,email" data-target="lookup_btBhAY,lookup_btBhAY_text,input_pXmbLD,input_yvUWLD,input_DpnGLY,input_fdtGnU,input_vNnLWo,input_hTbqVH,input_jnUmdb" onclick="lookup.open(this)">
+ 													<svg class="icon" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><circle cx="10" cy="10" r="7" /><line x1="21" y1="21" x2="15" y2="15" /></svg>
+ 												</button>
+ 											</div>
+ 										</div>
+ 									</div>
+ 									<div class="form-group mb-3 col-md-12">
+ 										<label class="form-label">Ship to</label>
+ 										<div>
+ 											<input type="text" name="shipto" id="input_pXmbLD" maxlength="100" value="<%=taxRecord.shipto%>" class="form-control " autocomplete="off" >
+ 										</div>
+ 									</div>
+ 									<div class="form-group mb-3 col-md-12">
+ 										<label class="form-label">Shipto address</label>
+ 										<div>
+ 											<input type="text" name="shipto_address" id="input_yvUWLD" maxlength="100" value="<%=taxRecord.shipto_address%>" class="form-control " autocomplete="off" >
+ 										</div>
+ 									</div>
+ 									<div class="form-group mb-3 col-md-12">
+ 										<label class="form-label">Shipto province</label>
+ 										<div>
+ 											<input type="text" name="shipto_province" id="input_DpnGLY" maxlength="100" value="<%=taxRecord.shipto_province%>" class="form-control " autocomplete="off" >
+ 										</div>
+ 									</div>
+ 									<div class="form-group mb-3 col-md-12">
+ 										<label class="form-label">Shipto country</label>
+ 										<div>
+ 											<input type="text" name="shipto_country" id="input_fdtGnU" maxlength="100" value="<%=taxRecord.shipto_country%>" class="form-control " autocomplete="off" >
+ 										</div>
+ 									</div>
+ 									<div class="form-group mb-3 col-md-12">
+ 										<label class="form-label">Shipto zipcode</label>
+ 										<div>
+ 											<input type="text" name="shipto_zipcode" id="input_vNnLWo" maxlength="100" value="<%=taxRecord.shipto_zipcode%>" class="form-control " autocomplete="off" >
+ 										</div>
+ 									</div>
+ 									<div class="form-group mb-3 col-md-12">
+ 										<label class="form-label">Shipto phone</label>
+ 										<div>
+ 											<input type="text" name="shipto_phone" id="input_hTbqVH" maxlength="100" value="<%=taxRecord.shipto_phone%>" class="form-control " autocomplete="off" >
+ 										</div>
+ 									</div>
+ 									<div class="form-group mb-3 col-md-12">
+ 										<label class="form-label">Shipto email</label>
+ 										<div>
+ 											<input type="text" name="shipto_email" id="input_jnUmdb" maxlength="100" value="<%=taxRecord.shipto_email%>" class="form-control " autocomplete="off" >
+ 										</div>
+ 									</div>
+ 
+ 										</div>
+									</div>
+ 									<div class="form-group mb-3 col-md-12">
+ 										<label class="form-label">Invoice id</label>
+ 										<div>
+ 											<input type="text" name="invoice_id" id="input_tJjMbD" maxlength="100" value="<%=taxRecord.invoice_id%>" class="form-control " autocomplete="off" >
+ 										</div>
+ 									</div>
+ 									<div class="form-group mb-3 col-md-12">
+ 										<label class="form-label">Tax no</label>
+ 										<div>
+ 											<input type="text" name="doc_no" id="input_cVvNqs" maxlength="100" value="<%=taxRecord.doc_no%>" class="form-control " autocomplete="off" >
+ 										</div>
+ 									</div>
+ 
+ 									<div class="form-group mb-3 col-md-12">
+ 										<label class="form-label">Tax date</label>
+ 										<div class="input-icon mb-2">
+ 											<input class="form-control datepicker " data-format="DD/MM/YYYY" name="doc_date" id="datepicker_FXkmir" value="<%=moment(taxRecord.doc_date).format('DD/MM/YYYY')%>" />
+ 											<span class="input-icon-addon">
+ 												<svg class="icon" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><rect x="4" y="5" width="16" height="16" rx="2" /><line x1="16" y1="3" x2="16" y2="7" /><line x1="8" y1="3" x2="8" y2="7" /><line x1="4" y1="11" x2="20" y2="11" /><line x1="11" y1="15" x2="12" y2="15" /><line x1="12" y1="15" x2="12" y2="18" /></svg>
+ 											</span>
+ 										</div>
+ 									</div>
+ 
+									<hr class="" />
+
+ 							<div class="mb-3 col-md-12">
+ 								<div class="row">
+ 									<div class="d-flex">
+ 										<div class="form-label">Products</div>
+ 											<div class="ms-auto">
+ 												<div class="ms-2 d-inline-block">
+ 													<input type="button" value="Add" class="btn btn-light" onclick="_datasheet_ZxjafN.onAddRow()">
+ 												</div>
+ 												</div>
+ 									</div>
+ 									<div class="table-responsive">
+ 										<input type="hidden" name="datasheet_ZxjafN" id="datasheet_ZxjafN">
+ 										<table class="table table-vcenter card-table table-striped datasheet" data-id="datasheet_ZxjafN">
+ 											<thead>
+ 											</thead>
+ 											<tbody>
+ 											</tbody>
+ 										</table>
+ 									</div>
+ 								</div>
+ 							</div>
+ 
+									<hr class="" />
+									<div class="form-group mb-3 col-md-12">
+ 										<label class="form-label">Tax rate (#percent#)</label>
+ 										<div>
+ 											<input type="number" name="tax_rate" id="input_tjFnsI" maxlength="100" value="<%=taxRecord.tax_rate%>" required class="form-control " autocomplete="off" >
+ 										</div>
+ 									</div>
+ 									<div class="form-group mb-3 col-md-12">
+ 										<label class="form-label">Discount</label>
+ 										<div>
+ 											<input type="number" name="discount" id="input_NTreas" maxlength="100" value="<%=taxRecord.discount%>" required class="form-control " autocomplete="off" >
+ 										</div>
+ 									</div>
+ 
+ 							<div class="form-group mb-3 col-md-12">
+ 								<label class="form-label">Note</label>
+ 								<div>
+ 									<textarea name="note" id="textarea_TbSnoJ" maxlength="100" class="form-control " ><%=taxRecord.note%></textarea>
+ 								</div>
+ 							</div>
+ 									<div class="form-group mb-3 col-md-12">
+ 										<label class="form-label">Payer</label>
+ 										<div>
+ 											<input type="text" name="payer" id="input_MbsNTq" maxlength="100" value="<%=taxRecord.payer%>" class="form-control " autocomplete="off" >
+ 										</div>
+ 									</div>
+ 									<div class="form-group mb-3 col-md-12">
+ 										<label class="form-label">Payee</label>
+ 										<div>
+ 											<input type="text" name="payee" id="input_gFgwAr" maxlength="100" value="<%=taxRecord.payee%>" class="form-control " autocomplete="off" >
+ 										</div>
+ 									</div>
+ 									<div class="row " >
+										<div class="col-10 dz " data-dz="pRSjGn" id="pRSjGn" >
+ 											<%if(accessAction.edit){%>
+ 												<button type="button" id="button_qXeyyV" class="btn btn-fw btn-primary" onclick="printExternal('/printform/tax?id=<%=param.id%>')" >Print Tax</button>
+ 											<%}%>
+ 
+ 										</div>
+										<div class="col-2 dz text-right" data-dz="rGjVfm" id="rGjVfm" >
+ 											<%if(accessAction.edit){%> 
+ 												<div class="spinner-border" id="button_cvllNw_loading" role="status" style="display: none;"><span class="visually-hidden">Loading...</span></div> 
+ 												<button type="submit" id="button_cvllNw" class="btn btn-fw btn-primary btn-save" data-form="frm-xGOcrk" method-callback="" method-before="" >Save</button> 
+ 											<%}%>
+ 
+ 										</div>
+									</div>
+ 
+ 
+ 								</form>
+ 							</div>
+ 
+ 						</div>
+ 					</div>
+ 				</div>
+ 			</div>
+ 		</div>
+ 	</div>
+</div>
+
+<%- contentFor('scripts') %>
+<script type="text/javascript">
+    var accessAction = [];
+    var accessActionData = "<%-accessAction%>";
+    var dataParam = '<%-JSON.stringify(param)%>';
+    var param = {};
+    if(dataParam != ""){
+      param = JSON.parse('<%-JSON.stringify(param)%>');
+    }    
+    if(accessActionData != "" && accessActionData != undefined) {
+        accessAction = JSON.parse(String.raw `<%-JSON.stringify(accessAction)%>`);
+    }
+    
+var tax_itemRecords = [];
+var tax_itemRecordsData = "<%-tax_itemRecords%>";
+if(tax_itemRecordsData != "" && tax_itemRecordsData != undefined) {
+    tax_itemRecords = JSON.parse(String.raw `<%-JSON.stringify(tax_itemRecords)%>`);
+}
+
+var tableId = "datasheet_ZxjafN";
+var _datasheet_ZxjafN;
+
+setLookupValue_datasheet_ZxjafN = (data) => {
+    var tableId = data[0];
+    var rowId = data[1];
+    var foundIndex = _datasheet_ZxjafN.items.findIndex(x => x.id == rowId);
+    var elId = data[2];
+    var elName = data[3];
+    _datasheet_ZxjafN.items[foundIndex][elId] = data[4];
+    _datasheet_ZxjafN.items[foundIndex][elName] = data[5];
+    document.getElementById(tableId).value = JSON.stringify(_datasheet_ZxjafN.items);
+}
+
+0
+
+onload = () => {
+        
+    _datasheet_ZxjafN = new DataSheet("datasheet_ZxjafN",[{"text":"Item","width":"70%"},{"text":"Qty","width":"10%"},{"text":"Unit price","width":"10%"},{"text":"Total","width":"10%"}],[{"field":"product_id","field_text":"product_name","type":"lookup","readonly":false},{"field":"quantity","type":"number","readonly":false,"addevent":"onchange=calculateTotal(this)"},{"field":"unitprice","type":"number","readonly":false,"addevent":"onchange=calculateTotal(this)"},{"field":"total","type":"number","readonly":true}],tax_itemRecords,"/product","productRecords","Code,Name,Vendor,Price","code,name,vendor,price_sale","id,name");
+    _datasheet_ZxjafN.init();
+    if(!param.id){
+	document.getElementById("input_tjFnsI").value=7;
+	document.getElementById("input_NTreas").value=0;
+}
+}
+    
+    
+
+</script>

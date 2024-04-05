@@ -1,0 +1,67 @@
+<div class="page-body">
+	<div class="container-xl">
+ 		<div class="col-12">
+ 			<div class="card">
+ 				<div class="card-body">
+ 							<h3>Activities</h3><hr class="header-text"/>
+ 								<div class="row pb-1">
+ 
+ 									<div class="col-auto ms-auto d-print-none">
+ 										<div class="btn-list">
+ 											<%if(accessAction.export){%><a href="#" onclick="table_KdhpgN.export()" class="btn btn-outline-secondary d-none d-sm-inline">Export</a><%}%>
+ 											<%if(accessAction.create){%><a href="/activity/edit" class="btn btn-outline-success d-none d-sm-inline" target="">New Data</a><%}%>
+ 										</div>
+ 									</div>
+ 								</div>
+ 								<div class="table-responsive">
+ 									<table class="table card-table table-vcenter text-nowrap datatable table-striped" id="tbl-table_KdhpgN">
+ 										<thead>
+ 											<tr>
+ 												<th>Due date</th>
+												<th>Activity status</th>
+												<th>Owner</th>
+												<th></th>
+												<th></th>
+ 											</tr>
+ 										</thead>
+ 										<tbody>
+ 										</tbody>
+ 										<tfoot></tfoot> 
+ 									</table>
+ 								
+
+ 								<div id="tbl-table_KdhpgN-pagination" class="imple-pagination"></div>
+ 							</div>
+ 				</div>
+ 			</div>
+ 		</div>
+ 	</div>
+</div>
+
+<%- contentFor('scripts') %>
+<script type="text/javascript">
+    var accessAction = [];
+    var accessActionData = "<%-accessAction%>";
+    var dataParam = '<%-JSON.stringify(param)%>';
+    var param = {};
+    if(dataParam != ""){
+      param = JSON.parse('<%-JSON.stringify(param)%>');
+    }    
+    if(accessActionData != "" && accessActionData != undefined) {
+        accessAction = JSON.parse(String.raw `<%-JSON.stringify(accessAction)%>`);
+    }
+    
+    var activityRecords = JSON.parse(String.raw `<%-JSON.stringify(activityRecords)%>`);
+    
+    var activityRecordsPagination = JSON.parse(String.raw `<%-JSON.stringify(activityRecordsPagination)%>`);
+    var table_KdhpgN = new Table_KdhpgN("table_KdhpgN",accessAction);
+0
+
+onload = () => {
+        table_KdhpgN.render(activityRecords,"");
+        table_KdhpgN.pagination(activityRecordsPagination);
+}
+    
+    
+
+</script>

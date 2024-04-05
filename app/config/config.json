@@ -1,0 +1,134 @@
+{
+    "database": {
+        "username": "",
+        "password": "",
+        "databasename": "",
+        "host": "localhost",
+        "port": "3306",
+        "dialect": "mysql"
+    },
+    "uploadPath": "uploads",
+    "paginationNum": 20,
+    "exportRecord": 10,
+    "cookie": {
+        "securityKey": "SdhehUSR0nWePhkvs5IZc7w0BPL9qVV7",
+        "initVector": "elCAdpRnb8mzUWDM",
+        "name": "dNvFjIUV7aY1zTUA",
+        "secret": "3PzkbBepqCr2JcfU",
+        "maxAge": 1000,
+        "expires": 2147483647,
+        "cookieOptions": {
+            "httpOnly": true,
+            "secure": false,
+            "sameSite": true
+        }
+    },
+    "ignore": {
+        "exportColumns": [
+            "id",
+            "owner_id",
+            "assign",
+            "create_by",
+            "create_date",
+            "update_by",
+            "update_date"
+        ]
+    },
+    "importTables": [
+        {
+            "name": "activity",
+            "addDefaultData": false
+        },
+        {
+            "name": "activitystatus",
+            "addDefaultData": false
+        },
+        {
+            "name": "activitytype",
+            "addDefaultData": false
+        },
+        {
+            "name": "casestatus",
+            "addDefaultData": false
+        },
+        {
+            "name": "customer",
+            "addDefaultData": false
+        },
+        {
+            "name": "invoice",
+            "addDefaultData": false
+        },
+        {
+            "name": "invoice_item",
+            "addDefaultData": false
+        },
+        {
+            "name": "leads",
+            "addDefaultData": false
+        },
+        {
+            "name": "leadsource",
+            "addDefaultData": false
+        },
+        {
+            "name": "opportunity",
+            "addDefaultData": false
+        },
+        {
+            "name": "product",
+            "addDefaultData": false
+        },
+        {
+            "name": "productgroup",
+            "addDefaultData": false
+        },
+        {
+            "name": "purchase_order",
+            "addDefaultData": false
+        },
+        {
+            "name": "purchase_order_item",
+            "addDefaultData": false
+        },
+        {
+            "name": "quotation",
+            "addDefaultData": false
+        },
+        {
+            "name": "quotation_item",
+            "addDefaultData": false
+        },
+        {
+            "name": "receipt",
+            "addDefaultData": false
+        },
+        {
+            "name": "receipt_item",
+            "addDefaultData": false
+        },
+        {
+            "name": "servicecase",
+            "addDefaultData": false
+        },
+        {
+            "name": "tax",
+            "addDefaultData": false
+        },
+        {
+            "name": "tax_item",
+            "addDefaultData": false
+        },
+        {
+            "name": "user",
+            "addDefaultData": false
+        },
+        {
+            "name": "vendor",
+            "addDefaultData": false
+        }
+    ],
+    "dateFormat": "DD/MM/YYYY",
+    "databaseSync": "force",
+    "version": 1
+}

@@ -1,0 +1,145 @@
+<div class="page-body">
+	<div class="container-xl">
+ 		<div class="col-12">
+ 			<div class="card">
+ 				<div class="card-body">
+ 									<div class="row " >
+										<div class="col-3 dz undefined" data-dz="dLGGtP" id="dLGGtP" >
+ 
+ 											<div class="form-group text-center">
+ 												<img src="https://www.impleplus.com/static/logo-icon.png" class="text-center" style="width:50%;" />
+ 											</div>
+ 
+ 										</div>
+										<div class="col-9 dz undefined" data-dz="ryoABn" id="ryoABn" >
+ 											<p class="" style="font-size:26px" >impleplus co.,ltd</p> 
+ 											<p class="" >718/22 Lasalle Road, South Bangna, Bangna, Bangkok Thailand 10260</p> 
+ 											<p class="" >sale: sale@impleplus.com</p> 
+ 											<p class="" >Support: support@impleplus.com</p> 
+ 
+ 										</div>
+									</div>
+ 									<div class="row " >
+										<div class="col-12 dz undefined" data-dz="NvyIMh" id="NvyIMh" >
+ 											<p class="text-center" style="font-size:28px" >Quotation</p> <hr class="header-text"/>
+ 
+ 										</div>
+									</div>
+ 									<div class="row " >
+										<div class="col-9 dz undefined" data-dz="BNLWrr" id="BNLWrr" >
+ 											<p class="" >customer: <%=data.customer_name%></p> 
+ 											<p class="" >Address: <%=data.address%> <%=data.district%> <%=data.zipcode%> <%=data.state%></p> 
+ 											<p class="" >Tax: <%=data.tax_id%></p> 
+ 
+ 										</div>
+										<div class="col-3 dz undefined" data-dz="eOZKLH" id="eOZKLH" >
+ 											<p class="" >Quotation No. : <%=data.doc_no%></p> 
+ 											<p class="" >Date <%=data.doc_date%></p> 
+ 
+ 										</div>
+									</div>
+ 							<h3></h3><hr class="header-text"/>
+ 								<div class="row pb-1">
+ 
+ 									<div class="col-auto ms-auto d-print-none">
+ 										<div class="btn-list">
+ 											
+ 											
+ 										</div>
+ 									</div>
+ 								</div>
+ 								<div class="table-responsive">
+ 									<table class="table card-table table-vcenter text-nowrap datatable table-striped" id="tbl-table_AfVUoO">
+ 										<thead>
+ 											<tr>
+ 												<th>#</th>
+												<th>Product name</th>
+												<th>Qty</th>
+												<th>Unit price</th>
+												<th>Total</th>
+ 											</tr>
+ 										</thead>
+ 										<tbody>
+ 										</tbody>
+ 										<tfoot></tfoot> 
+ 									</table>
+ 								
+
+ 								<div id="tbl-table_AfVUoO-pagination" class="imple-pagination"></div>
+ 							</div>									<div class="row pt-3" >
+										<div class="col-2 dz undefined" data-dz="NMRBEb" id="NMRBEb" >
+ 											<p class="bold" >Remark</p> 
+ 
+ 										</div>
+										<div class="col-10 dz undefined" data-dz="UCmCem" id="UCmCem" >
+ 											<p class="" ><%=data.remark%></p> 
+ 
+ 										</div>
+									</div>
+ 
+									<hr class="" />
+									<div class="row " >
+										<div class="col-4 dz undefined" data-dz="CqDeEz" id="CqDeEz" >
+ 											<p class="text-center" >Order By</p> 
+ 											<p class="" >&nbsp;</p> 
+ 											<p class="text-center" ><%=new Date().toLocaleDateString()%></p> 
+ 
+ 										</div>
+										<div class="col-4 dz undefined" data-dz="FNepqk" id="FNepqk" >
+ 											<p class="text-center" >Prepared By</p> 
+ 											<p class="" >&nbsp;</p> 
+ 											<p class="text-center" ><%=new Date().toLocaleDateString()%></p> 
+ 
+ 										</div>
+										<div class="col-4 dz undefined" data-dz="OGOoTF" id="OGOoTF" >
+ 											<p class="text-center" >Authorized By</p> 
+ 											<p class="" >&nbsp;</p> 
+ 											<p class="text-center" ><%=new Date().toLocaleDateString()%></p> 
+ 
+ 										</div>
+									</div>
+ 
+ 				</div>
+ 			</div>
+ 		</div>
+ 	</div>
+</div>
+
+<%- contentFor('styles') %>
+<style>
+@media print {
+    @page {
+    margin-left: 0.5in;
+    margin-right: 0.5in;
+    margin-top: 0;
+    margin-bottom: 0;
+    }
+}	
+</style>
+<%- contentFor('scripts') %>
+<script type="text/javascript">
+    var accessAction = [];
+    var accessActionData = "<%-accessAction%>";
+    var dataParam = '<%-JSON.stringify(param)%>';
+    var param = {};
+    if(dataParam != ""){
+      param = JSON.parse('<%-JSON.stringify(param)%>');
+    }    
+    if(accessActionData != "" && accessActionData != undefined) {
+        accessAction = JSON.parse(String.raw `<%-JSON.stringify(accessAction)%>`);
+    }
+    
+    var items = JSON.parse(String.raw `<%-JSON.stringify(items)%>`);
+    var summaryItem = JSON.parse(String.raw `<%-JSON.stringify(summaryItem)%>`);
+    
+    var table_AfVUoO = new Table_AfVUoO("table_AfVUoO",accessAction);
+0
+
+onload = () => {
+        table_AfVUoO.render(items,summaryItem);
+        
+}
+    
+    
+
+</script>
