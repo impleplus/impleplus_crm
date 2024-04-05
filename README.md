@@ -28,15 +28,6 @@ Program details include:
 
 - Set rights to access the system
 
-Program details include:
-
-- Can record device information
-
-- Can to record device group information
-
-- Can record employee information
-
-- Can record borrowing-return information
 
 <h3>2. Demo</h3>
 
