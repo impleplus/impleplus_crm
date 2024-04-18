@@ -1,7 +1,5 @@
 <h2>impleplus Customer Relationship management (CRM)</h2>
 
-<img src="https://impleplus.com/static/builder/crm.png">
-
 <h3>1. Program details</h3>
 
  Customer relation ship management (CRM). CRM program is a program used for customer data management services, including some parts of the accounting system so that the sales department or accounting department can manage customer information efficiently. developed by Impleplus Company. and distribute it for free There is no cost. Can be used for free.
@@ -74,3 +72,6 @@ http://localhost:3000
 <h3>6 Special thank >>> tabler UI</h3>
 impleplus builder front-end developed base on tabler UI. Please see link for detail 
 https://github.com/tabler/tabler
+
+<h4>7 New version and upgrade. Please visit link as below.</h4>
+<a href="https://builder.impleplus.com/installapp" target="_blank">CRM New Version</a>
